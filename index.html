@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>你的食人花很担心你：医馆门口</title>
+  <link rel="stylesheet" href="./css/variables.css" />
+  <link rel="stylesheet" href="./css/base.css" />
+  <link rel="stylesheet" href="./css/components.css" />
+  <link rel="stylesheet" href="./css/scenes/clinicGate.css" />
+</head>
+<body>
+  <div class="game-shell">
+    <section class="scene" aria-label="医馆门口场景">
+      <div class="scene-title">第一场景 · 医馆门口</div>
+      <div class="hint">找到进入医馆的办法</div>
+
+      <button id="sceneHotspot" class="scene-hotspot" aria-label="点击场景"></button>
+
+      <button id="guide" class="character guide hidden" aria-label="点击接引人">
+        <div class="glow"></div>
+        <div class="sprite"></div>
+        <div class="label">接引人</div>
+      </button>
+    </section>
+
+    <section class="dialogue-panel" aria-label="对话框">
+      <div class="dialogue-inner">
+        <div class="speaker-column">
+          <div id="speaker" class="nameplate">主角</div>
+          <div id="speakerName" class="speaker-name">主角</div>
+        </div>
+        <div class="dialogue-main">
+          <div id="dialogueText" class="dialogue-text">我在哪里？这里是……</div>
+        </div>
+        <div class="dialogue-actions">
+          <button id="resetBtn" class="btn">重置场景</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="inventory-panel" aria-label="物品栏">
+      <div class="inventory-inner">
+        <div class="panel-title">物品栏</div>
+        <div id="inventoryList" class="inventory-list"></div>
+        <div id="itemDetail" class="item-detail">
+          <strong>当前目标</strong>
+          找到进去的办法
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="./js/core/items.js"></script>
+  <script src="./js/core/state.js"></script>
+  <script src="./js/core/helpers.js"></script>
+  <script src="./js/core/speakerMeta.js"></script>
+  <script src="./js/core/ui.js"></script>
+  <script src="./js/scenes/clinicGate.js"></script>
+  <script>
+    window.APP.scenes.mountClinicGateScene();
+  </script>
+</body>
+</html>
